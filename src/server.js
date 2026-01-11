@@ -33,8 +33,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://nhom02-tranngocbien-21110140-fe.vercel.app",
-      "https://nhom02-tranngocbien-21110140-fe-*.vercel.app", // Vercel preview URLs
+      "https://shoeshop-tranbien.vercel.app",
+      "https://shoeshop-tranbien-*.vercel.app", // Vercel preview URLs
     ],
     credentials: true,
   })
