@@ -31,7 +31,11 @@ global.io = io;
 // Các middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://nhom02-tranngocbien-21110140-fe.vercel.app",
+      "https://nhom02-tranngocbien-21110140-fe-*.vercel.app", // Vercel preview URLs
+    ],
     credentials: true,
   })
 );
