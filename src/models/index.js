@@ -21,6 +21,10 @@ const modelFolderMap = {
   ViewHistory: "viewHistory",
   UserBehavior: "userBehavior",
   RecommendationCache: "recommendationCache",
+  KnowledgeDocument: "knowledgeDocument",
+  ChatConversation: "chatConversation",
+  ChatMessage: "chatMessage",
+  CancelRequest: "cancelRequest",
   // Các models khác giữ nguyên (folder name = model name lowercase)
 };
 
