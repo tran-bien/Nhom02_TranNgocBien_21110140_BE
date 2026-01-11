@@ -22,9 +22,10 @@ const viewHistoryService = {
       throw new ApiError(400, "Product ID là bắt buộc");
     }
 
-    if (!userId && !sessionId) {
-      throw new ApiError(400, "Cần userId hoặc sessionId");
-    }
+    // Không bắt buộc userId hoặc sessionId - cho phép khách vãng lai
+    // if (!userId && !sessionId) {
+    //   throw new ApiError(400, "Cần userId hoặc sessionId");
+    // }
 
     const mongoose = require("mongoose");
 
@@ -61,6 +62,14 @@ const viewHistoryService = {
     }).sort({ finalPrice: 1 });
 
     const productPrice = inventoryItem?.finalPrice || 0;
+
+    // Nếu không có userId và sessionId, chỉ trả về success mà không lưu
+    if (!userObjectId && !sessionId) {
+      return {
+        success: true,
+        message: "Product view tracked (guest - no history saved)",
+      };
+    }
 
     // Upsert view history: Nếu user đã xem product này, chỉ update createdAt và variant
     // Mỗi user chỉ có 1 record cho mỗi product (record gần nhất)

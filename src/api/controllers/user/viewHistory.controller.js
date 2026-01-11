@@ -13,6 +13,8 @@ const viewHistoryController = {
     const userId = req.user?._id; // Optional nếu không login
     const deviceInfo = req.headers["user-agent"];
 
+    // Không cần validate userId hoặc sessionId - cho phép khách vãng lai xem sản phẩm
+
     const result = await viewHistoryService.trackView({
       productId,
       variantId,
