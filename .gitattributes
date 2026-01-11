@@ -1,0 +1,6 @@
+# Normalize all text files to use LF line endings
+* text=auto
+
+# Specifically enforce LF for JavaScript and JSON
+*.js    text eol=lf
+*.json  text eol=lf 

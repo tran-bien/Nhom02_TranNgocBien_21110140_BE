@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Tệp môi trường (chứa thông tin nhạy cảm)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Thư mục và files tạm thời
+.DS_Store
+.idea/
+.vscode/
+.tmp/
+.cache/
+.eslintcache
+coverage/
+dist/
+build/
+temp/
+
+# Các file upload
+uploads/*
+!uploads/.gitkeep
+
+# MongoDB dump
+*.dump
+
+# Các tệp cấu hình cụ thể cho OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/ 

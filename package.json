@@ -1,0 +1,51 @@
+{
+  "name": "backendshoeshop",
+  "version": "1.0.0",
+  "description": "Backend cho website bán giày",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.13.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^7.2.0",
+    "ioredis": "^5.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "moment": "^2.30.1",
+    "mongoose": "^8.12.1",
+    "mongoose-paginate-v2": "^1.9.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.2",
+    "node-cache": "^5.1.2",
+    "nodemailer": "^7.0.7",
+    "slugify": "^1.6.6",
+    "socket.io": "^4.8.1",
+    "ua-parser-js": "^2.0.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "_moduleAliases": {
+    "@config": "src/config",
+    "@models": "src/models",
+    "@services": "src/services",
+    "@controllers": "src/api/controllers",
+    "@middlewares": "src/api/middlewares",
+    "@routes": "src/api/routes",
+    "@utils": "src/utils",
+    "@validators": "src/api/validators",
+    "@plugins": "src/plugins"
+  }
+}
